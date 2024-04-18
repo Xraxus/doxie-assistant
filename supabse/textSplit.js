@@ -11,7 +11,7 @@ const sbApiKey = process.env.SUPABASE_API_KEY;
 const sbUrl = process.env.SUPABASE_URL;
 const openAIApiKey = process.env.OPENAI_API_KEY;
 
-console.log(sbApiKey, sbUrl, openAIApiKey);
+
 
 async function readFromFile(filePath) {
   try {
@@ -25,7 +25,7 @@ async function readFromFile(filePath) {
 
     const output = await splitter.createDocuments([text]);
 
-    console.log(sbApiKey, sbUrl, openAIApiKey);
+
 
     // Check if the environment variables are defined
     if (!sbApiKey || !sbUrl || !openAIApiKey) {

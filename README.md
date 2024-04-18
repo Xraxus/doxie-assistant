@@ -1,6 +1,6 @@
-## Doxie Destinations
+## Doxie Assistant
 
-My Personal AI Assistant for simplified daily life!
+Personal AI Assistant for simplified daily life!
 
 [Check out here!]()
 
@@ -8,7 +8,7 @@ My Personal AI Assistant for simplified daily life!
 
 ### Project Description
 
-"Doxie Assistant" is my personal AI assistant, designed to streamline daily tasks and enhance productivity.
+"Doxie Assistant" is a personal AI assistant, designed to streamline daily tasks and enhance productivity.
 From managing schedule to providing personalized recommendations, Doxie Assistant leverages AI technology to make life easier.
 
 ### Technologies Used

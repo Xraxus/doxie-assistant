@@ -1,10 +1,9 @@
-function App() {
+import Logo from "./components/Logo";
 
-
+export default function App() {
   return (
     <>
+      <Logo />
     </>
-  )
+  );
 }
-
-export default App

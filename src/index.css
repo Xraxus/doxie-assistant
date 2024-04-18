@@ -189,7 +189,7 @@ body {
   }
 }
 
-@media screen and (max-height: 899px) {
+@media screen and (max-height: 899px), (min-width: 768px) {
   .chat-input textarea {
     min-height: 100px;
   }

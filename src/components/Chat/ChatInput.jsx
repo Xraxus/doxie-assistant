@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { ChatContext } from "./Chat";
 import createNewMessage from "../../utils/createNewMessage";
+import { getStandaloneQuestion } from "../../langchain";
 
 export default function ChatInput() {
   const [inputMessage, setInputMessage] = useState("");
@@ -10,6 +11,7 @@ export default function ChatInput() {
     const newMessage = createNewMessage(inputMessage, "user");
 
     setMessages([...messages, newMessage]);
+    getStandaloneQuestion(newMessage.text);
     setInputMessage("");
   }
 

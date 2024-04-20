@@ -1,16 +1,13 @@
 import { useState, useContext } from "react";
 import { ChatContext } from "./Chat";
+import createNewMessage from "../../utils/createNewMessage";
 
 export default function ChatInput() {
   const [inputMessage, setInputMessage] = useState("");
   const { messages, setMessages } = useContext(ChatContext);
 
   function formSubmit() {
-    const newMessage = {
-      text: inputMessage,
-      role: "user",
-      date: new Date().toISOString(),
-    };
+    const newMessage = createNewMessage(inputMessage, "user");
 
     setMessages([...messages, newMessage]);
     setInputMessage("");

@@ -6,12 +6,10 @@ export default function ChatLog() {
   const { messages } = useContext(ChatContext);
 
   const messagesList = messages.length
-    ? messages.map((message, index) => (
-        <ChatMessage key={index} message={message} />
+    ? messages.map((message) => (
+        <ChatMessage key={message.id} message={message} />
       ))
     : "";
 
-  return <div className="chat-log">
-    {messagesList}
-  </div>;
+  return <div className="chat-log">{messagesList}</div>;
 }

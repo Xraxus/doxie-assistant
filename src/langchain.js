@@ -6,7 +6,7 @@ const llm = new ChatOpenAI({ openAIApiKey });
 
 export async function getStandaloneQuestion(userInput) {
   const standaloneQuestionTemplate =
-    "Create a standalone question based on this user input: {userInput}";
+    "Given a question, convert it to a standalone question. question: {userInput} standalone question:";
   const standaloneQuestionPrompt = PromptTemplate.fromTemplate(
     standaloneQuestionTemplate
   );

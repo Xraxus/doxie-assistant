@@ -3,12 +3,10 @@ import { ChatContext } from "./Chat";
 import { useContext } from "react";
 
 export default function ChatLog() {
-  const chat = useContext(ChatContext);
+  const { messages } = useContext(ChatContext);
 
-  console.log(chat);
-
-  const messagesList = chat.messages.length
-    ? chat.messages.map((message, index) => (
+  const messagesList = messages.length
+    ? messages.map((message, index) => (
         <ChatMessage key={index} message={message} />
       ))
     : "";

@@ -5,7 +5,7 @@ Personal AI Assistant for simplified daily life!
 ![image](https://github.com/Xraxus/doxie-assistant/assets/100704138/1a63b508-cb2b-4cb9-9160-e1f0f4b1fb4f)
 
 
-[Check out here!]()
+[Check out here!](https://doxie-assistant.netlify.app/)
 
 ---
 
@@ -17,7 +17,7 @@ From managing schedule to providing personalized recommendations, Doxie Assistan
 ### Technologies Used
 
 Frontend: React, JavaScript, CSS, HTML
-Backend:
+Backend: Netlify Serverless
 AI Models: OpenAI (GPT-3.5-turbo)
 
 ### Installation Instructions
@@ -36,15 +36,11 @@ Local - vite (main branch)
 3. Set up VITE_OPENAI_API_KEY, VITE_SUPABASE_API_KEY and VITE_SUPABASE_URL in .env file located at the root of project directory
 4. Launch using 'npm run dev'
 
-~~Using netlify (deploy branch)~~
+Using netlify (deploy branch)
 
-~~1. Clone the repository~~
-~~2. Connect the repository to Netlify.~~
-~~3. Make sure to set up environment variables () in netlify environmental variables settings.~~
-
-### Future Improvements
-
-???
+1. Clone the repository
+2. Connect the repository to Netlify.
+3. Make sure to set up environment variables (OPENAI_API_KEY, SUPABASE_API_KEY and SUPABASE_URL) in netlify environmental variables settings.
 
 ### Contributing
 

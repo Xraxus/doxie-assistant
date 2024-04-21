@@ -1,11 +1,9 @@
-import React, { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const ChatContext = createContext({});
 
-const placeholderMessages = [];
-
 export default function ({ children }) {
-  const [messages, setMessages] = React.useState(placeholderMessages);
+  const [messages, setMessages] = useState([]);
 
   return (
     <div className="chat">

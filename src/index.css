@@ -11,13 +11,14 @@ body {
 
 /* LAYOUT */
 #root {
-  margin: 0 auto 1em;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
   min-width: 320px;
   max-width: 80%;
+  min-height: 100vh;
 }
 
 /* LOGO */
@@ -44,6 +45,7 @@ body {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: stretch;
   gap: 1em;
 }
 
@@ -51,6 +53,18 @@ body {
   display: flex;
   flex-flow: column nowrap;
   gap: 0.65em;
+  flex-grow: 1;
+  flex-basis: 40vh;
+  overflow-y: scroll;
+  margin: 1em 0;
+}
+
+.chat-log::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-log::-moz-scrollbar {
+  display: none;
 }
 
 .chat-message {
@@ -110,6 +124,8 @@ body {
 }
 
 .chat-input {
+  justify-self: flex-end;
+  bottom: 0;
   display: flex;
   flex-flow: column nowrap;
   gap: 1em;
@@ -143,6 +159,7 @@ body {
   border: none;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   transition: box-shadow 0.5s;
+  margin-bottom: 0.5em;
 }
 
 .chat-input button:hover,

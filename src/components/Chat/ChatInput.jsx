@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { ChatContext } from "./Chat";
 import createNewMessage from "../../utils/createNewMessage";
-import { getAssistantResponse } from "../../langchain";
 
 export default function ChatInput() {
   const [inputMessage, setInputMessage] = useState("");

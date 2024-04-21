@@ -85,16 +85,16 @@ standalone question:`;
   });
   return response;
 }
-export default async function handler(event, context) {
-  console.log(event.body);
-  const body = JSON.parse(event.body);
 
-  const { userInput, messagesHistory } = body;
+export async function handler(event, context) {
+  const requestBody = JSON.parse(event.body);
 
-  const response = await getAssistantResponse(userInput, messagesHistory);
+  const { userInput, messagesHistory } = requestBody;
+
+  const result = await getAssistantResponse(userInput, messagesHistory);
 
   return {
     statusCode: 200,
-    body: JSON.stringify(response),
+    body: JSON.stringify(result),
   };
 }

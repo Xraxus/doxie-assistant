@@ -11,27 +11,21 @@ export default function ChatInput() {
     setIsLoading(true);
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInputMessage("");
-    try {
-      const assistantResponse = await fetch(
-        "/.netlify/functions/assistantHandler",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            userInput: newMessage,
-            messagesHistory: messages,
-          }),
-        }
-      ).then((response) => response.json());
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        createNewMessage(assistantResponse, "assistant"),
-      ]);
-    } catch (error) {
-      console.error("Error fetching assistant response:", error);
-    }
+
+    const response = await fetch("/.netlify/functions/assistantHandler", {
+      method: "POST",
+      body: JSON.stringify({
+        userInput: newMessage,
+        messagesHistory: messages,
+      }),
+    });
+
+    const data = await response.json();
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      createNewMessage(data, "assistant"),
+    ]);
+
     setIsLoading(false);
   }
 

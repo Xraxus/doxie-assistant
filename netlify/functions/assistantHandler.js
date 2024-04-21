@@ -7,7 +7,7 @@ import {
   RunnableSequence,
   RunnablePassthrough,
 } from "@langchain/core/runnables";
-import formatConvHistory from "./utils/formatConvHistory";
+import formatConvHistory from "../../src/utils/formatConvHistory";
 
 const openAIApiKey = process.env.OPENAI_API_KEY;
 const supabaseApiKey = process.env.SUPABASE_API_KEY;

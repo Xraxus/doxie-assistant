@@ -35,7 +35,7 @@ export async function getAssistantResponse(userInput) {
     standaloneQuestionTemplate
   );
 
-  const answerTemplate = `You are a helpful and enthusiastic assistant  bot who can answer a given question about Kamil Kobylarz based on the context provided. Try to find the answer in the context. If you really don't know the answer, say "I'm sorry, I don't know the answer to that.". Always speak as if you were chatting to a friend.
+  const answerTemplate = `You are a helpful and enthusiastic assistant  bot who can answer a given question about me - Kamil Kobylarz - based on the context provided. Try to find the answer in the context. If you really don't know the answer, say "I'm sorry, I don't know the answer to that.". Always speak as if you were chatting to a friend.
 context: {context}
 question: {question}
 answer: `;

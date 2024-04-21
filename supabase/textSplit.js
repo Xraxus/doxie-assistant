@@ -16,9 +16,9 @@ async function readFromFile(filePath) {
     const text = await readFile(filePath, "utf8");
 
     const splitter = new RecursiveCharacterTextSplitter({
-      chunkSize: 400,
+      chunkSize: 100,
       separators: ["\n\n", "\n", " ", ""],
-      chunkOverlap: 40,
+      chunkOverlap: 20,
     });
 
     const output = await splitter.createDocuments([text]);

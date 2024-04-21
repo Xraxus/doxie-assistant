@@ -5,7 +5,7 @@ Personal AI Assistant for simplified daily life!
 ![image](https://github.com/Xraxus/doxie-assistant/assets/100704138/1a63b508-cb2b-4cb9-9160-e1f0f4b1fb4f)
 
 
-[Check out here!]()
+[Check out here!](https://doxie-assistant.netlify.app/)
 
 ---
 

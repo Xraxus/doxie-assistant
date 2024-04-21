@@ -6,7 +6,7 @@ export default function ChatLog() {
   const { messages, isLoading } = useContext(ChatContext);
   const chatLogRef = useRef(null);
   useEffect(() => {
-    chatLogRef.current.lastElementChild.scrollIntoView();
+    chatLogRef.current.lastElementChild.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const messagesList = messages.length

@@ -12,8 +12,14 @@ const openAIApiKey = import.meta.env.VITE_OPENAI_API_KEY;
 const supabaseApiKey = import.meta.env.VITE_SUPABASE_API_KEY;
 const supabbaseUrl = import.meta.env.VITE_SUPABASE_URL;
 
-const llm = new ChatOpenAI({ openAIApiKey });
-const embeddings = new OpenAIEmbeddings({ openAIApiKey });
+const llm = new ChatOpenAI({
+  model: "gpt-3.5-turbo",
+  openAIApiKey,
+  temperature: 0.5,
+});
+const embeddings = new OpenAIEmbeddings({
+  openAIApiKey,
+});
 const client = createClient(supabbaseUrl, supabaseApiKey);
 
 const vectorStore = new SupabaseVectorStore(embeddings, {

@@ -11,21 +11,17 @@ const sbApiKey = process.env.SUPABASE_API_KEY;
 const sbUrl = process.env.SUPABASE_URL;
 const openAIApiKey = process.env.OPENAI_API_KEY;
 
-
-
 async function readFromFile(filePath) {
   try {
     const text = await readFile(filePath, "utf8");
 
     const splitter = new RecursiveCharacterTextSplitter({
-      chunkSize: 200,
+      chunkSize: 400,
       separators: ["\n\n", "\n", " ", ""],
-      chunkOverlap: 20,
+      chunkOverlap: 40,
     });
 
     const output = await splitter.createDocuments([text]);
-
-
 
     // Check if the environment variables are defined
     if (!sbApiKey || !sbUrl || !openAIApiKey) {

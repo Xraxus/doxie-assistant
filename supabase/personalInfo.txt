@@ -1,5 +1,3 @@
-Personal Information
-
 My name is Kamil Kobylarz and I like to be called "Kamil". I was born on October 1st 2001 in Rzeszów, Polska. Since 2020, I have been living in Kraków, Poland. I'm married to Klara. In 2020-2023 I've been a bachelor student of Digital Information Processing at Jagiellonian University. I've been in love with the computers ever since I started using it as a kid. I love building projects.
 
 
@@ -63,48 +61,47 @@ I love to play games. Here are some of my favorite games (unordered):
 
 
 I am a huge fan of movies & TV Series & animes. Here are my ratings of some of my favorites (ranked in scale of 1 to 10):
-* 10/10  - The Peasants (2024) [Movie]
-* 10/10  - Hamilton (2020) [Recording of a musical]
-* 10/10  - Arcane (2021) [Animated series]
-* 10/10  - Queen's Gambit (2020) [Series]
-* 10/10  - Breaking Bad (2008-2013) [Series]
+* 10/10 rating  - Hamilton (2020) [Recording of a musical]
+* 10/10 rating  - The Peasants (2024) [Movie]
+* 10/10 rating  - Arcane (2021) [Animated series]
+* 10/10 rating  - Queen's Gambit (2020) [Series]
+* 10/10 rating  - Breaking Bad (2008-2013) [Series]
+
+* 9/10 rating  - Andor (2022) [Series]
+* 9/10 rating  - Fallout (2024) [Series]
+* 9/10 rating  - Bleach (2004-2012) [Anime Series]
+* 9/10 rating  - Full Metal Alchemist: Brotherhood (2009-2012) [Anime Series]
+* 9/10 rating  - Attack on Titan (2013 - 2023) [Anime Series]
+* 9/10 rating  - Star Wars: Clone Wars (2008-2020) [Animated  series]
+* 9/10 rating  - Star Wars: Ahsoka (2023) [Series]
+* 9/10 rating  - Fleabag (2016-2019) [Series]
+* 9/10 rating  - The Kominsky Method (2018-2021) [Series]
+* 9/10 rating  - Game of Thrones (2011-2019) [Series]
+* 9/10 rating  - Blinded by the Lights (2018) [Series]
+* 9/10 rating  - Dune: Part 2 (2024) [Movie]
+* 9/10 rating  - Poor Things (2023) [Movie]
+* 9/10 rating  - The Power of the Dog (2021) [Movie]
+* 9/10 rating  - Forgotten Love/Znachor (2023) [Movie]
+* 9/10 rating  - Another Round/Druk (2020) [Movie]
+* 9/10 rating  - Gone Girl (2014) [Movie]
+* 9/10 rating  - About Time (2013) [Movie]
+* 9/10 rating  - Star Wars V - The Empire Strikes Back (1980) [Movie]
+* 9/10 rating  - Star Wars VI - Return of The Jedi (1983) [Movie]
+* 9/10 rating  - La La Land (2016) [Movie]
+* 9/10 rating  - Kimi no na wa (2016) [Anime Movie]
+* 9/10 rating  - A Dog's Purpose (2017) [Movie]
+* 9/10 rating  - Doctor Strange (2016) [Movie]
 
 
-* 9/10  - Fallout (2024) [Series]
-* 9/10  - Andor (2022) [Series]
-* 9/10  - Bleach (2004-2012) [Anime Series]
-* 9/10  - Full Metal Alchemist: Brotherhood (2009-2012) [Anime Series]
-* 9/10  - Attack on Titan (2013 - 2023) [Anime Series]
-* 9/10  - Star Wars: Clone Wars (2008-2020) [Animated  series]
-* 9/10  - Star Wars: Ahsoka (2023) [Series]
-* 9/10  - Fleabag (2016-2019) [Series]
-* 9/10  - The Kominsky Method (2018-2021) [Series]
-* 9/10  - Game of Thrones (2011-2019) [Series]
-* 9/10  - Blinded by the Lights (2018) [Series]
-* 9/10  - Dune: Part 2 (2024) [Movie]
-* 9/10  - Poor Things (2023) [Movie]
-* 9/10  - The Power of the Dog (2021) [Movie]
-* 9/10  - Forgotten Love/Znachor (2023) [Movie]
-* 9/10  - Another Round/Druk (2020) [Movie]
-* 9/10  - Gone Girl (2014) [Movie]
-* 9/10  - About Time (2013) [Movie]
-* 9/10  - Star Wars V - The Empire Strikes Back (1980) [Movie]
-* 9/10  - Star Wars VI - Return of The Jedi (1983) [Movie]
-* 9/10  - La La Land (2016) [Movie]
-* 9/10  - Kimi no na wa (2016) [Anime Movie]
-* 9/10  - A Dog's Purpose (2017) [Movie]
-* 9/10  - Doctor Strange (2016) [Movie]
-
-
-* 8/10  - Little Women (2019) [Movie]
-* 8/10  - Summer Solstice (2015) [Movie]
-* 8/10  - A Street Cat Named Bob  (2016) [Movie] 
-* 8/10  - Star Wars IV - New Hope (1977) [Movie]
-* 8/10  - 500 Days of Summer (2009) [Movie]
-* 8/10  - Iron Man (2008) [Movie]
-* 8/10  - The Good Place (2016-2020) [Series]
-* 8/10  - How I Met Your Mother (2005-2014) [Series]
-* 8/10  - The Mandalorian (2019-2023) [Series]
+* 8/10 rating  - Little Women (2019) [Movie]
+* 8/10 rating  - Summer Solstice (2015) [Movie]
+* 8/10 rating  - A Street Cat Named Bob  (2016) [Movie] 
+* 8/10 rating  - Star Wars IV - New Hope (1977) [Movie]
+* 8/10 rating  - 500 Days of Summer (2009) [Movie]
+* 8/10 rating  - Iron Man (2008) [Movie]
+* 8/10 rating  - The Good Place (2016-2020) [Series]
+* 8/10 rating  - How I Met Your Mother (2005-2014) [Series]
+* 8/10 rating  - The Mandalorian (2019-2023) [Series]
 
 
 I love delicious food. My favorite food is:

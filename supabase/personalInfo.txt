@@ -106,6 +106,13 @@ Favorite Foods:
 - Pizza
 - Ramen
 
-Instructions:
-- Please remind me to code every single day, even if it is just for 15 minutes.
+Favorite Activities:
 - I love going on long walks outside with my dog Leia & my wife Klara.
+- I enjoy cozy movie nights at home, complete with popcorn and my favorite films, series, or anime.
+- I enjoy organizing game nights with friends, playing multiplayer online games or board games together.
+- I like experimenting with new coding projects or working on personal coding challenges.
+- I cherish quiet evenings with Klara, cuddling up with a good book or binge-watching my favorite TV series.
+- I like trying out new recipes and cooking delicious meals.
+- I find participating in online coding courses or webinars to expand my programming knowledge rewarding.
+- I take pleasure in building and customizing my own PC setup, optimizing it for gaming or coding.
+- I love relaxing with Leia and Klara, enjoying the tranquility of our home and the company of my loved ones.

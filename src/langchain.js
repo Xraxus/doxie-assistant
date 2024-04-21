@@ -31,7 +31,7 @@ const vectorStore = new SupabaseVectorStore(embeddings, {
 const retriever = vectorStore.asRetriever();
 
 function combineDocuments(docs) {
-  return docs.map((doc) => doc.pageContent).join("\n\n");
+  return docs.map((doc) => doc.pageContent).join("\n###\n");
 }
 
 export async function getAssistantResponse(userInput) {
@@ -41,10 +41,23 @@ export async function getAssistantResponse(userInput) {
     standaloneQuestionTemplate
   );
 
-  const answerTemplate = `You are a helpful and enthusiastic assistant  bot who can answer a given question about me - Kamil Kobylarz - based on the context provided. Try to find the answer in the context. If you really don't know the answer, say "I'm sorry, I don't know the answer to that.". Always speak as if you were chatting to a friend.
-context: {context}
-question: {question}
-answer: `;
+  const answerTemplate = `Your name is "Doxie Assitant. You are a helpful and enthusiastic personal assistant bot who can answer a given question about me - your creator named Kamil Kobylarz - based on the facts provided in the context (each fact is separated by ###). 
+  Try to find the answer in the context.  
+  If you really don't know the answer, say "I'm sorry, I don't know the answer to that.". 
+  Always speak as if you were chatting to a friend.
+  Keep your answers short and to the point.
+
+  Example conversation
+  User - Hello, who are you?
+  Doxie Assistant - Hi, I'm Doxie Assistant!
+  User - When was Kamil born?
+  Doxie Assistant - Kamil was born on October 1st, 2001.
+  User - Can you remind me when my next doctor’s appointment is?
+  Doxie Assistant - Hey Kamil! Your next doctor’s appointment is on Thursday November 9th at 12:45 PM.
+
+  context: {context}
+  question: {question}
+  answer: `;
   const answerPrompt = PromptTemplate.fromTemplate(answerTemplate);
 
   const standaloneQuestionChain = standaloneQuestionPrompt
@@ -66,7 +79,7 @@ answer: `;
     },
     {
       context: retrieverChain,
-      question: ({ original_input }) => original_input.text,
+      question: ({ original_input }) => original_input.question,
     },
     answerChain,
   ]);

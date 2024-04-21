@@ -13,13 +13,17 @@ export default function ChatInput() {
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInputMessage("");
     try {
-      const assistantResponse = await getAssistantResponse(newMessage);
+      const assistantResponse = await getAssistantResponse(
+        newMessage,
+        messages
+      );
       setMessages((prevMessages) => [
         ...prevMessages,
         createNewMessage(assistantResponse, "assistant"),
       ]);
     } catch (error) {
-      console.error("Error fetching assistant response:", error);    }
+      console.error("Error fetching assistant response:", error);
+    }
   }
 
   function handleSubmit(event) {

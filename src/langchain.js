@@ -7,6 +7,7 @@ import {
   RunnableSequence,
   RunnablePassthrough,
 } from "@langchain/core/runnables";
+import formatConvHistory from "./utils/formatConvHistory";
 
 const openAIApiKey = import.meta.env.VITE_OPENAI_API_KEY;
 const supabaseApiKey = import.meta.env.VITE_SUPABASE_API_KEY;
@@ -34,29 +35,20 @@ function combineDocuments(docs) {
   return docs.map((doc) => doc.pageContent).join("\n###\n");
 }
 
-export async function getAssistantResponse(userInput) {
-  const standaloneQuestionTemplate =
-    "Given a question, convert it to a standalone question. question: {question} standalone question:";
+export async function getAssistantResponse(userInput, messagesHistory) {
+  const standaloneQuestionTemplate = `Given some conversation history (if any) and a question, convert the user input to a standalone question. 
+conversation history: {conv_history}
+user input: {user_input} 
+standalone question:`;
   const standaloneQuestionPrompt = PromptTemplate.fromTemplate(
     standaloneQuestionTemplate
   );
 
-  const answerTemplate = `Your name is "Doxie Assitant. You are a helpful and enthusiastic personal assistant bot who can answer a given question about me - your creator named Kamil Kobylarz - based on the facts provided in the context (each fact is separated by ###). 
-  Try to find the answer in the context.  
-  If you really don't know the answer, say "I'm sorry, I don't know the answer to that.". 
-  Always speak as if you were chatting to a friend.
-  Keep your answers short and to the point.
+  const answerTemplate = `You are "Doxie Assistant", a helpful and enthusiastic AI assistant bot who can talk & answer a given question about me - Kamil Kobylarz - based on the context provided and the conversation history.If user input is a question try to find the answer in the context, If user input was a fact, say "Thank you for sharing that with me.". If the answer is not given in the context, find the answer in the conversation history if possible. If user input was a question and you  don't know the answer, say "I'm sorry, I don't know the answer to that.".  Don't try to make up an answer. Always speak as if you were chatting to a friend.
 
-  Example conversation
-  User - Hello, who are you?
-  Doxie Assistant - Hi, I'm Doxie Assistant!
-  User - When was Kamil born?
-  Doxie Assistant - Kamil was born on October 1st, 2001.
-  User - Can you remind me when my next doctor’s appointment is?
-  Doxie Assistant - Hey Kamil! Your next doctor’s appointment is on Thursday November 9th at 12:45 PM.
-
+  conversation history: {conv_history}
   context: {context}
-  question: {question}
+  user input: {user_input} 
   answer: `;
   const answerPrompt = PromptTemplate.fromTemplate(answerTemplate);
 
@@ -79,11 +71,15 @@ export async function getAssistantResponse(userInput) {
     },
     {
       context: retrieverChain,
-      question: ({ original_input }) => original_input.question,
+      user_input: ({ original_input }) => original_input.user_input,
+      conv_history: ({ original_input }) => original_input.conv_history,
     },
     answerChain,
   ]);
 
-  const response = await chain.invoke({ question: userInput.text });
+  const response = await chain.invoke({
+    user_input: userInput.text,
+    conv_history: formatConvHistory(messagesHistory),
+  });
   return response;
 }

@@ -3,7 +3,7 @@ import { ChatContext } from "./Chat";
 import { useContext } from "react";
 
 export default function ChatLog() {
-  const { messages } = useContext(ChatContext);
+  const { messages, isLoading } = useContext(ChatContext);
 
   const messagesList = messages.length
     ? messages.map((message) => (
@@ -11,5 +11,10 @@ export default function ChatLog() {
       ))
     : "";
 
-  return <div className="chat-log">{messagesList}</div>;
+  return (
+    <div className="chat-log">
+      {messagesList}
+      {isLoading && <div class="loader"></div>}
+    </div>
+  );
 }

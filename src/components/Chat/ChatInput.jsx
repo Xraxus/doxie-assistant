@@ -5,11 +5,11 @@ import { getAssistantResponse } from "../../langchain";
 
 export default function ChatInput() {
   const [inputMessage, setInputMessage] = useState("");
-  const { messages, setMessages } = useContext(ChatContext);
+  const { messages, setMessages, setIsLoading } = useContext(ChatContext);
 
   async function formSubmit() {
     const newMessage = createNewMessage(inputMessage, "user");
-
+    setIsLoading(true);
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInputMessage("");
     try {
@@ -24,6 +24,7 @@ export default function ChatInput() {
     } catch (error) {
       console.error("Error fetching assistant response:", error);
     }
+    setIsLoading(false);
   }
 
   function handleSubmit(event) {

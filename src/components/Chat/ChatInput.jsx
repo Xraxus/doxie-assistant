@@ -7,12 +7,19 @@ export default function ChatInput() {
   const [inputMessage, setInputMessage] = useState("");
   const { messages, setMessages } = useContext(ChatContext);
 
-  function formSubmit() {
+  async function formSubmit() {
     const newMessage = createNewMessage(inputMessage, "user");
 
-    setMessages([...messages, newMessage]);
-    getAssistantResponse(newMessage.text);
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInputMessage("");
+    try {
+      const assistantResponse = await getAssistantResponse(newMessage);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        createNewMessage(assistantResponse, "assistant"),
+      ]);
+    } catch (error) {
+      console.error("Error fetching assistant response:", error);    }
   }
 
   function handleSubmit(event) {

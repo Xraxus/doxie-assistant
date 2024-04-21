@@ -11,14 +11,19 @@ const initialMessages = [
   },
 ];
 
-export default function ({ children }) {
+export default function Chat({ children }) {
   const [messages, setMessages] = useState(initialMessages);
   const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div className="chat">
       <ChatContext.Provider
-        value={{ messages, setMessages, isLoading, setIsLoading }}
+        value={{
+          messages,
+          setMessages,
+          isLoading,
+          setIsLoading,
+        }}
       >
         {children}
       </ChatContext.Provider>

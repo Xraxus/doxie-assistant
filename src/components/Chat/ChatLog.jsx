@@ -1,9 +1,13 @@
 import ChatMessage from "./ChatMessage";
 import { ChatContext } from "./Chat";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 export default function ChatLog() {
   const { messages, isLoading } = useContext(ChatContext);
+  const chatLogRef = useRef(null);
+  useEffect(() => {
+    chatLogRef.current.lastElementChild.scrollIntoView();
+  }, [messages]);
 
   const messagesList = messages.length
     ? messages.map((message) => (
@@ -12,9 +16,9 @@ export default function ChatLog() {
     : "";
 
   return (
-    <div className="chat-log">
+    <div className="chat-log" ref={chatLogRef}>
       {messagesList}
-      {isLoading && <div class="loader"></div>}
+      {isLoading && <div className="loader"></div>}
     </div>
   );
 }

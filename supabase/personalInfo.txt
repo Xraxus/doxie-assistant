@@ -32,7 +32,7 @@ Appointments/Events:
   - Time: 18:00 - 18:45
 
 Hobbies/Interests:
-- Coding: Passionate about programming since childhood
+- Coding: Passionate about programming
 - Gaming: Enjoys playing a variety of games
   - Favorite Games:
     1. The Elder Scrolls V: Skyrim

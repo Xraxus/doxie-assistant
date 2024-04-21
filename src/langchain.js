@@ -16,7 +16,7 @@ const supabbaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const llm = new ChatOpenAI({
   model: "gpt-3.5-turbo",
   openAIApiKey,
-  temperature: 0.5,
+  temperature: 0.3,
 });
 const embeddings = new OpenAIEmbeddings({
   openAIApiKey,

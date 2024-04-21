@@ -13,10 +13,19 @@ export default function ChatInput() {
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInputMessage("");
     try {
-      const assistantResponse = await getAssistantResponse(
-        newMessage,
-        messages
-      );
+      const assistantResponse = await fetch(
+        "/.netlify/functions/assistantHandler",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userInput: newMessage,
+            messagesHistory: messages,
+          }),
+        }
+      ).then((response) => response.json());
       setMessages((prevMessages) => [
         ...prevMessages,
         createNewMessage(assistantResponse, "assistant"),

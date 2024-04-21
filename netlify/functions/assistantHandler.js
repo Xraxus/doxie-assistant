@@ -86,6 +86,7 @@ standalone question:`;
   return response;
 }
 export default async function handler(event, context) {
+  console.log(event.body);
   const body = JSON.parse(event.body);
 
   const { userInput, messagesHistory } = body;
